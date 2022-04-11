@@ -1,4 +1,5 @@
 import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 import expert1 from '../../../images/experts/expert-1.jpg'
 import expert2 from '../../../images/experts/expert-2.jpg'
 import expert3 from '../../../images/experts/expert-3.jpg'
@@ -17,6 +18,7 @@ const experts = [
 ]
 const Experts = () => {
      return (
+
           <div className='container'>
                <h2 className='text-primary text-center my-5'>Our Experts</h2>
                <div className="row">
@@ -25,6 +27,9 @@ const Experts = () => {
                     }
                </div>
           </div>
+
+
+
      );
 };
 
