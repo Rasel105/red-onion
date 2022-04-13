@@ -1,5 +1,4 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
 import expert1 from '../../../images/experts/expert-1.jpg'
 import expert2 from '../../../images/experts/expert-2.jpg'
 import expert3 from '../../../images/experts/expert-3.jpg'
