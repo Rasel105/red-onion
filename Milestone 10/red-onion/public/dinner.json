@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Healthy Meal Plan",
+    "img": "https://i.ibb.co/3Wrhn65/dinner1.png",
+    "comment": "Apple is reportedly planning to declare",
+    "ratings": "4.6"
+  },
+  {
+    "id": 2,
+    "name": "Fried Chicken Bento",
+    "img": "https://i.ibb.co/R6X6kKN/lunch2.png",
+    "comment": "Apple is reportedly planning to declare",
+    "ratings": "4.5"
+  },
+  {
+    "id": 3,
+    "name": "Traggon-Rubbed-Salmon",
+    "img": "https://i.ibb.co/FVn0GGg/lunch3.png",
+    "comment": "Apple is reportedly planning to declare",
+    "ratings": "4.2"
+  },
+  {
+    "id": 4,
+    "name": "Indian Lunch",
+    "img": "https://i.ibb.co/pP8GPwv/lunch5.png",
+    "comment": "Apple is reportedly planning to declare",
+    "ratings": "4.9"
+  },
+  {
+    "id": 5,
+    "name": "Beaf Steak",
+    "img": "https://i.ibb.co/P1cYmRR/lunch4.png",
+    "comment": "Apple is reportedly planning to declare",
+    "ratings": "4.7"
+  },
+  {
+    "id": 6,
+    "name": "Honey-Soy-Glazed Salmon With Poppors",
+    "img": "https://i.ibb.co/pP8GPwv/lunch5.png",
+    "comment": "Apple is reportedly planning to declare",
+    "ratings": "4.6"
+  }
+]
