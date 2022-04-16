@@ -1,10 +1,27 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 import logo from '../../images/logo2.png'
-import FoodMenu from '../Pages/FoodMenu/FoodMenu';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Header = () => {
+     const [user] = useAuthState(auth);
+     const hanldeSignOut = () => {
+          signOut(auth);
+          toast.success('🦄 Tui Ber hoye gecho!', {
+               position: "top-center",
+               autoClose: 2000,
+               hideProgressBar: false,
+               closeOnClick: true,
+               pauseOnHover: true,
+               draggable: true,
+               progress: undefined,
+          });
+     }
      return (
           <div>
                <Navbar bg="light" variant="light">
@@ -16,10 +33,26 @@ const Header = () => {
                               <Nav>
                                    <Link to='/'>Home</Link>
                                    <Link to='menu'>Menu</Link>
-                                   <Link to='login'>Login</Link>
+                                   {
+                                        user
+                                             ?
+                                             <Button className='mx-2' onClick={hanldeSignOut}>Sign Out</Button>
+                                             :
+                                             <Link to='login'>Login</Link>
+                                   }
                               </Nav>
                          </div>
                     </Container>
+                    <ToastContainer
+                         position="top-center"
+                         autoClose={5000}
+                         hideProgressBar={false}
+                         newestOnTop={false}
+                         closeOnClick
+                         rtl={false}
+                         pauseOnFocusLoss
+                         draggable
+                         pauseOnHover />
                </Navbar>
           </div>
      );

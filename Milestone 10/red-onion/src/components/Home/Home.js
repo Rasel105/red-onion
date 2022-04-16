@@ -1,5 +1,6 @@
 import React from 'react';
 import banner from '../../images/bannerbackground.png'
+import Loading from '../Loading/Loading';
 import FoodMenu from '../Pages/FoodMenu/FoodMenu';
 
 

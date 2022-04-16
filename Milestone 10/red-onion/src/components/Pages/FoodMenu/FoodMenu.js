@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import Home from '../../Home/Home';
-import banner from '../../images/bannerbackground.png'
+import banner from '../../../images/bannerbackground.png'
 const FoodMenu = () => {
      return (
           <div >
