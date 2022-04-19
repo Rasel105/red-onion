@@ -4,8 +4,8 @@ import './Register.css'
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
-import { async } from '@firebase/util';
 import Loading from '../../Shared/Loading/Loading';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Register = () => {
      const [agree, setAgree] = useState(false)
@@ -35,7 +35,7 @@ const Register = () => {
           // console.log(event.target.name.value, event.target.email.value)
           // console.log(event.target.password.value);
           // const name = event.target.name.value;
-          // console.log(name)
+          // console.log(name)     
 
           const name = event.target.name.value;
           const email = event.target.email.value;
@@ -46,12 +46,11 @@ const Register = () => {
           await updateProfile({ displayName: name });
           console.log('Updated profile');
           navigate('/home')
-
-
      }
 
      return (
           <div className='register-form'>
+               <PageTitle title={'Register'} />
                <h2 className='text-center text-primary m-3'>Please Register</h2>
                <form onSubmit={handleRegister}>
                     <input type="text" name="name" id="" placeholder='Your Name' />
@@ -60,8 +59,11 @@ const Register = () => {
 
                     <input placeholder='Your password ' required type="password" name="password" id="" />
                     <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
+
                     {/* <label className={agree ? "ps-2 text-primary" : "ps-2"} htmlFor="terms">Accept Genius Terms and Conditions</label> */}
+
                     <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Genius Terms and Conditions</label>
+
                     <input
                          disabled={!agree}
                          className='w-50 mx-auto btn btn-primary mt-3' type="submit" value="Register" />

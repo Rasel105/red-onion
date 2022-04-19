@@ -7,16 +7,18 @@ import auth from '../../../firebase.init';
 import logo from '../../../images/logo.png'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from 'react-helmet-async';
 const Header = () => {
      const [user] = useAuthState(auth)
      const handleSignOut = () => {
           signOut(auth);
           toast("Signout Successfully");
-
      };
      return (
 
+
           <>
+
                <Navbar collapseOnSelect expand="lg" sticky='top' bg="primary" variant="dark">
                     <Container>
                          <Navbar.Brand as={Link} to="/">
@@ -25,6 +27,7 @@ const Header = () => {
                          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                          <Navbar.Collapse id="responsive-navbar-nav">
                               <Nav className="me-auto">
+                                   <Nav.Link href="home">Home</Nav.Link>
                                    <Nav.Link href="home#services">Services</Nav.Link>
                                    <Nav.Link href="home#experts">Experts</Nav.Link>
                                    <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
@@ -45,9 +48,10 @@ const Header = () => {
                                    }
                               </Nav>
                          </Navbar.Collapse>
-                         <ToastContainer />
+
                     </Container>
                </Navbar>
+               <ToastContainer />
           </>
 
      );

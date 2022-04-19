@@ -12,7 +12,7 @@ const SocialLogin = () => {
      const navigate = useNavigate();
      let errorElement;
      if (error || error1) {
-          errorElement = <p className='text-danger'>Error: {error?.message} {error1?.message}</p>
+          errorElement = <p className='text-danger '>Error: {error?.message} {error1?.message}</p>
      }
 
      if (loading || loading1) {

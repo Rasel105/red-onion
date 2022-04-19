@@ -6,7 +6,6 @@ import banner3 from '../../../images/banner/banner3.jpg'
 
 const Banner = () => {
      const [index, setIndex] = useState(0);
-
      const handleSelect = (selectedIndex, e) => {
           setIndex(selectedIndex);
      };
@@ -42,7 +41,6 @@ const Banner = () => {
                               src={banner3}
                               alt="Third slide"
                          />
-
                          <Carousel.Caption>
                               <h3>Third slide label</h3>
                               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
